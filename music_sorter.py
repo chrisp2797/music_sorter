@@ -60,7 +60,6 @@ def sort_music_dir(direc):
 def main():
     org_directory=input("Give full path of the Directory you want to sort:")
     sort_music_dir(org_directory)
-    print("",end="\r")
     input("Operation Complete.\nPress enter to exit.")
 
 if __name__=='__main__':
