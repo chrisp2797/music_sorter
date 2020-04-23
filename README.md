@@ -6,4 +6,5 @@ It Reads the metadata of the mp3 for the artist's and album's name.
 You will need to install the eyed3 library, you can do it by typing "pip install eyed3" in a terminal.
 
 ~~Then when you run it, the script will ask for the full path of the directory you want to sort (ex. "C:/Users/user/Music")~~
-**NOW YOU CAN JUST CLICK THE DIRECTORY YOU WANT TO SORT WITH YOUR MOUSE**
+
+__NOW YOU CAN JUST CLICK THE DIRECTORY YOU WANT TO SORT WITH YOUR MOUSE__
