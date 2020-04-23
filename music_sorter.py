@@ -1,9 +1,22 @@
 import os
 import shutil
-import eyed3
 import sys
-import tkinter as tk
-from tkinter import filedialog
+try:
+    import eyed3
+except:
+    print('It appears that you have not install eyed3.\nPlease run "pip install -r requirements.txt" ')
+    if os.name == "nt":
+        input("Press enter to exit")
+    sys.exit(1)
+try:
+    import tkinter as tk
+    from tkinter import filedialog
+except ImportError:
+    print("Your python might not be configured for Tk")
+    print("If you're running Arch/Manjaro try to install tk with pacman")
+    if os.name == "nt":
+        input("Press enter to exit")
+    sys.exit(1)
 #block and enable print because we dont want the eyed3 to print
 def blockPrint():
     sys.stdout = open(os.devnull, 'w')
@@ -60,7 +73,9 @@ def main():
     tk.Tk().withdraw()
     org_directory=tk.filedialog.askdirectory()
     sort_music_dir(org_directory)
-    input("Operation Complete.\nPress enter to exit.")
+    print("Operation Complete.")
+    if os.name == "nt":
+        input("Press enter to exit")
 
 if __name__=='__main__':
     main()
