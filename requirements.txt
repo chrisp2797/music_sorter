@@ -1,0 +1,6 @@
+#
+#######requirements.txt##########
+#
+####requirements without version specifiers###########
+eyed3
+#
