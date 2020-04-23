@@ -30,7 +30,10 @@ def strip_illegals(s):
     
 def sort_music_dir(direc):
     blockPrint()
-    songs=os.listdir(direc)
+    try:
+        songs=os.listdir(direc)
+    except:
+        sys.exit(0)
     for i in songs:
         try:
             song=eyed3.load(direc+'/'+i)
