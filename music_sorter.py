@@ -2,6 +2,8 @@ import os
 import shutil
 import eyed3
 import sys
+import tkinter as tk
+from tkinter import filedialog
 #block and enable print because we dont want the eyed3 to print
 def blockPrint():
     sys.stdout = open(os.devnull, 'w')
@@ -28,13 +30,7 @@ def strip_illegals(s):
     
 def sort_music_dir(direc):
     blockPrint()
-    try:
-        songs=os.listdir(direc)
-    except:
-        enablePrint()
-        direc=input("Please give a valid directory path.:")
-        sort_music_dir(direc)
-        return
+    songs=os.listdir(direc)
     for i in songs:
         try:
             song=eyed3.load(direc+'/'+i)
@@ -58,7 +54,8 @@ def sort_music_dir(direc):
     enablePrint()
     return
 def main():
-    org_directory=input("Give full path of the Directory you want to sort:")
+    tk.Tk().withdraw()
+    org_directory=tk.filedialog.askdirectory()
     sort_music_dir(org_directory)
     print("",end="\r")
     input("Operation Complete.\nPress enter to exit.")
