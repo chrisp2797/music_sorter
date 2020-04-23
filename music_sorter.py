@@ -57,7 +57,6 @@ def main():
     tk.Tk().withdraw()
     org_directory=tk.filedialog.askdirectory()
     sort_music_dir(org_directory)
-    print("",end="\r")
     input("Operation Complete.\nPress enter to exit.")
 
 if __name__=='__main__':
