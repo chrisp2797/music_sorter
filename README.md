@@ -3,7 +3,7 @@
 This is a small python script that sorts unsorted mp3 files based on the Artist and the Album.
 It Reads the metadata of the mp3 for the artist's and album's name.
 # Usage
-You will need to install the eyed3 library, you can do it by typing "pip install eyed3" in a terminal.
+If you're using this script for the first time, run "pip install -r requirements.txt"
 
 If you're running Arch/Manjaro you might need to install tk, to do that type "pacman -S tk"
 
